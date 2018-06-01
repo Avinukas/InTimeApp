@@ -1,0 +1,82 @@
+@() @main("In Time") {
+<section class="container">
+	<div class="one border">
+		<h2>Firma</h2>
+		<ul class="nav nav-tabs">
+			<li class="active"><a data-toggle="tab" href="#firmaAnmelden">Anmelden</a></li>
+			<li><a data-toggle="tab" href="#firmaRegistrieren">Registrieren</a></li>
+		</ul>
+
+		<div class="tab-content">
+			<div id="firmaAnmelden" class="tab-pane fade in active">
+				<form>
+					<div class="input-group">
+						<input id="firmaId" type="text" class="form-control"
+							name="FirmaId" placeholder="Firma ID"> <input id="email"
+							type="text" class="form-control" name="email" placeholder="Email">
+						<input id="password" type="password" class="form-control"
+							name="password" placeholder="Passwort">
+						<button type="button" class="btn btn-default ">anmelden</button>
+					</div>
+				</form>
+			</div>
+			<div id="firmaRegistrieren" class="tab-pane fade">
+				<form>
+					<div class="input-group">
+						<input id="firmaName" type="text" class="form-control"
+							name="FirmaName" placeholder="Name der Firma"> <input
+							id="emailr" type="text" class="form-control" name="emailr"
+							placeholder="Email"> <input id="passwordr"
+							type="password" class="form-control" name="passwordr"
+							placeholder="Passwort"> <input id="passwordrw"
+							type="password" class="form-control" name="passwordrw"
+							placeholder="Passwort wiederholen">
+						<button type="button" class="btn btn-default">registrieren</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	<div class="two border">
+		<h2>Mitarbeiter</h2>
+
+		<ul class="nav nav-tabs">
+			<li class="active"><a data-toggle="tab" href="#mitarbeiterAnmeldung">Anmelden</a></li>
+			<li><a data-toggle="tab" href="#mitarbeiterRegistrieren">Registrieren</a></li>
+		</ul>
+
+		<div class="tab-content">
+			<div id="mitarbeiterAnmeldung" class="tab-pane fade in active">
+				<form>
+					<div class="input-group">
+						<input id="firmaIdm" type="text" class="form-control"
+							name="FirmaIdm" placeholder="Firma ID"> 
+						<input id="emailm"
+							type="text" class="form-control" name="email" placeholder="Email">
+						<input id="passwordm" type="password" class="form-control"
+							name="passwordm" placeholder="Passwort">
+						<button type="button" class="btn btn-default ">anmelden</button>
+					</div>
+				</form>
+			</div>
+			<div id="mitarbeiterRegistrieren" class="tab-pane fade">
+				<form>
+					<div class="input-group">
+						<input id="firmaIdmr" type="text" class="form-control"
+							name="FirmaIdmr" placeholder="ID der Firma"> <input
+							id="emailrm" type="text" class="form-control" name="emailrm"
+							placeholder="Email"> <input id="passwordrm"
+							type="password" class="form-control" name="passwordrm"
+							placeholder="Passwort"> <input id="passwordrwm"
+							type="password" class="form-control" name="passwordrwm"
+							placeholder="Passwort wiederholen">
+						<button type="button" class="btn btn-default">registrieren</button>
+					</div>
+				</form>
+			</div>
+		</div>
+
+	</div>
+</section>
+
+}

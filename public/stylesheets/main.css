@@ -1,0 +1,31 @@
+body {
+	background-image: url(../images/background.png);
+	font-size: 0.94em; // oder
+    font-size: 94%;
+    font-family: Helvetica, Arial, sans-serif;
+    line-height: 100%;
+}
+
+.container {
+    width: 80%;
+    margin: 10% auto;
+}
+.one {
+    width: 40%;
+    margin-right: 10%;
+    padding: 5%;
+    float: left;
+}
+.two {
+   width: 40%;
+   padding: 5%;
+   float: left;
+}
+
+.border {
+	moz-box-shadow: 0 0 5px #d9dcdd;
+	-webkit-box-shadow: 0 0 5px #d9dcdd;
+	box-shadow: 0 0 10px #d9dcdd;
+	border-radius: 3px;
+}
+
