@@ -1,9 +1,9 @@
 package controllers;
 
 import java.io.File;
-
+import play.mvc.Http.*;
+import play.api.mvc.MultipartFormData.FilePart;
 import play.mvc.*;
-import play.mvc.Http.MultipartFormData.FilePart;
 import java.io.File;
 
 /**
@@ -30,9 +30,9 @@ public class HomeController extends Controller {
     public Result getImpressum() {
         return ok(views.html.impressum.render());
     }
-    public Result upload() {
-    	MultipartFormData body = request().body.asMultipartFormData();
-    	FilePart pictur = body.getFile("picture");
+   /* public Result upload() {
+    	MultipartFormData<Object> body = request().body().asMultipartFormData();
+    	FilePart picture = body.getFile("picture");
     	if (picture != null) {
     		String fileName = picture.getFilename();
     		String email = session("email");
@@ -45,6 +45,21 @@ public class HomeController extends Controller {
     		flash("error", "Missing File");
     		return redirect("/company");
     	}
+    }*/
+    public Result upload() {
+        Http.MultipartFormData<File> body = request().body().asMultipartFormData();
+        Http.MultipartFormData.FilePart<File> picture = body.getFile("picture");
+        if (picture != null) {
+            String fileName = picture.getFilename();
+            String contentType = picture.getContentType();
+            File file = picture.getFile();
+            File newFile = new File(".//public//images//" + 1);
+    		file.renameTo(newFile);
+            return ok("/company");
+        } else {
+            flash("error", "Missing file");
+            return ok("/company");
+        }
     }
 
 }
