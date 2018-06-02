@@ -67,3 +67,36 @@ body {
 	margin-bottom: 3%;
 	padding: 1%;
 }
+
+#footer {
+/*line-height: 80px;*/
+width:100%;
+color: #fff;
+height: 80px;
+background-color: #111;
+padding: 30px 0px 0px 0px;
+}
+
+
+/* column width */
+#footer > ul > li {
+width: 250px;
+  list-style:none;
+ float: left;
+ border-left: 1px solid #fff;
+ padding-left: 10px; 
+  }
+
+#footer > ul > li > ul {
+    font-weight: normal;
+      list-style:none;
+       font-size: .80em;
+ }
+
+ #footer a, #footer a:visited, #footer a:active {
+    color: #ffffff;
+  }
+
+  #footer a:hover {
+    color: #ffffff;
+  }
