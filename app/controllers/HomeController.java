@@ -17,5 +17,14 @@ public class HomeController extends Controller {
     public Result index() {
         return ok(views.html.index.render());
     }
+    public Result getCompany() {
+        return ok(views.html.company.render());
+    }
+    public Result getKontakt() {
+        return ok(views.html.kontakt.render());
+    }
+    public Result getImpressum() {
+        return ok(views.html.impressum.render());
+    }
 
 }
