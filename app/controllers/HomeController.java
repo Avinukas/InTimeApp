@@ -1,6 +1,10 @@
 package controllers;
 
+import java.io.File;
+
 import play.mvc.*;
+import play.mvc.Http.MultipartFormData.FilePart;
+import java.io.File;
 
 /**
  * This controller contains an action to handle HTTP requests
@@ -25,6 +29,22 @@ public class HomeController extends Controller {
     }
     public Result getImpressum() {
         return ok(views.html.impressum.render());
+    }
+    public Result upload() {
+    	MultipartFormData body = request().body.asMultipartFormData();
+    	FilePart pictur = body.getFile("picture");
+    	if (picture != null) {
+    		String fileName = picture.getFilename();
+    		String email = session("email");
+    		String contentType = picture.getContentType();
+    		File file = picture.getFile();
+    		File newFile = new File(".//public//images//" + 1);
+    		file.renameTo(newFile);
+    		return redirect("/company");
+    	} else {
+    		flash("error", "Missing File");
+    		return redirect("/company");
+    	}
     }
 
 }

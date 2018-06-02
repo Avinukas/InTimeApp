@@ -3,43 +3,33 @@
 	<nav class="navbar navbar-inverse">
 		<div class="container-fluid">
 			<div class="navbar-header">
-				<a class="navbar-brand" href="#">WebSiteName</a>
+				@helper.form(action=routes.HomeController.upload, 'enctype -> "multipart/form-data"){
+					<input class="navbar-brand" type="image" src="@routes.Assets.versioned("images/favicon.png")" name="picture">
+				}
 			</div>
 			<ul class="nav navbar-nav">
-				<li class="active"><a href="#">Home</a></li>
-				<li class="dropdown"><a class="dropdown-toggle"
-					data-toggle="dropdown" href="#">Page 1 <span class="caret"></span>
-				</a>
-					<ul class="dropdown-menu">
-						<li><a href="#">Page 1-1</a></li>
-						<li><a href="#">Page 1-2</a></li>
-						<li><a href="#">Page 1-3</a></li>
-					</ul></li>
-				<li><a href="#">Page 2</a></li>
+				<li class="active">
+					<a href="#">Unternehmen</a>
+				</li>
+				<li>
+					<a href="#">Mitarbeiter</a>
+				</li>
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
-				<li><a href="#"><span class="glyphicon glyphicon-user"></span>
-						Sign Up</a></li>
-				<li><a href="#"><span class="glyphicon glyphicon-log-in"></span>
-						Login</a></li>
+				<li>
+					<a href="#"><span class="glyphicon glyphicon-user"></span> Meine Daten</a>
+				</li>
+				<li>
+					<a href="#"><span class="glyphicon glyphicon-log-in"></span> abmelden</a>
+				</li>
 			</ul>
 		</div>
 	</nav>
-
 	<div class="container">
 		<h3>Right Aligned Navbar</h3>
 		<p>The .navbar-right class is used to right-align navigation bar
 			buttons.</p>
 	</div>
-
-	<!--<footer class="footer footerContainer">
-			<div class="fj
-			ooterContainer">
-				<div class="leftPosition1">&#169 Gintare Lideikyte & Michel Wetterau</div>
-				<div class="leftPosition"><a href="/kontakt">Kontakt</a></div>
-				<div class="leftPosition"><a href="/impressum">Impressum</a></div>
-			</div>
-	</footer>-->
 	<footer id="footer">
 		<ul>
 			<li>
